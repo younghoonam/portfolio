@@ -1,6 +1,6 @@
 console.log("/portfolio/");const o=`<header>
   <div class="logo">
-    <a href="/index.html">Younghoo Nam</a>
+    <a href="/portfolio/index.html">Younghoo Nam</a>
   </div>
   <div class="links">
     <a href="/portfolio/index.html">Projects</a>

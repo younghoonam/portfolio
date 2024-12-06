@@ -1,47 +1,15 @@
 {
   "projects": {
-    "digital-fabrication": {
-      "firstImage": "digital-fabrication1.jpg",
+    "parametric-cosmetics": {
+      "firstImage": "parametric-cosmetic1.jpg",
       "assets": [
-        "digital-fabrication1.jpg",
-        "digital-fabrication2.jpg",
-        "digital-fabrication3.jpg",
-        "digital-fabrication4.jpg",
-        "digital-fabrication5.jpg",
-        "digital-fabrication6.jpg",
-        "digital-fabrication7.jpg"
-      ]
-    },
-    "dodetech": {
-      "firstImage": "dodetech1.png",
-      "assets": [
-        "dodetech1.png",
-        "dodetech2.png",
-        "dodetech3.jpg",
-        "dodetech4.jpg"
-      ]
-    },
-    "kinetic-furniture": {
-      "firstImage": "kinetic-furniture1.jpg",
-      "assets": [
-        "kinetic-furniture1.jpg",
-        "kinetic-furniture2.jpg",
-        "kinetic-furniture3.jpg",
-        "kinetic-furniture4.jpg",
-        "kinetic-furniture5.png"
-      ]
-    },
-    "kinetic-light": {
-      "firstImage": "kinetic-light1.jpg",
-      "assets": [
-        "kinetic-light-video.mp4",
-        "kinetic-light1.jpg",
-        "kinetic-light2.jpg",
-        "kinetic-light3.jpg",
-        "kinetic-light4.jpg",
-        "kinetic-light5.jpg",
-        "kinetic-light6.jpg",
-        "kinetic-light7.jpg"
+        "parametric-cosmetic1.jpg",
+        "parametric-cosmetic2.jpg",
+        "parametric-cosmetic3.jpg",
+        "parametric-cosmetic4.jpg",
+        "parametric-cosmetic5.jpg",
+        "parametric-cosmetic6.jpg",
+        "parametric-cosmetic7.jpg"
       ]
     },
     "kinetic-light-v2": {
@@ -57,27 +25,6 @@
         "kinetic-light-v27.jpg",
         "kinetic-light-v28.jpg",
         "kinetic-light-v29.jpg"
-      ]
-    },
-    "logo-design": {
-      "firstImage": "logo-design1.png",
-      "assets": [
-        "logo-design1.png",
-        "logo-design2.png",
-        "logo-design3.png",
-        "logo-design4.png"
-      ]
-    },
-    "media-design": {
-      "firstImage": "media-design1.png",
-      "assets": [
-        "media-design-video.mp4",
-        "media-design1.png",
-        "media-design2.png",
-        "media-design3.png",
-        "media-design4.png",
-        "media-design5.png",
-        "media-design6.png"
       ]
     },
     "parametric-blinds": {
@@ -99,29 +46,22 @@
         "parametric-blinds9.jpg"
       ]
     },
-    "parametric-cosmetics": {
-      "firstImage": "parametric-cosmetic1.jpg",
+    "variable-bathroom": {
+      "firstImage": "variable-bathroom1.jpg",
       "assets": [
-        "parametric-cosmetic1.jpg",
-        "parametric-cosmetic2.jpg",
-        "parametric-cosmetic3.jpg",
-        "parametric-cosmetic4.jpg",
-        "parametric-cosmetic5.jpg",
-        "parametric-cosmetic6.jpg",
-        "parametric-cosmetic7.jpg"
-      ]
-    },
-    "parametric-lampshades": {
-      "firstImage": "parametric-lampshades1.jpg",
-      "assets": [
-        "parametric-lampshades1.jpg",
-        "parametric-lampshades2 .jpg",
-        "parametric-lampshades3.jpg",
-        "parametric-lampshades4.jpg",
-        "parametric-lampshades5.jpg",
-        "parametric-lampshades6.jpg",
-        "parametric-lampshades7.jpg",
-        "parametric-lampshades8.jpg"
+        "variable-bathroom1.jpg",
+        "variable-bathroom10.jpg",
+        "variable-bathroom11.jpg",
+        "variable-bathroom12.jpg",
+        "variable-bathroom13.jpg",
+        "variable-bathroom2.jpg",
+        "variable-bathroom3.jpg",
+        "variable-bathroom4.jpg",
+        "variable-bathroom5.jpg",
+        "variable-bathroom6.jpg",
+        "variable-bathroom7.jpg",
+        "variable-bathroom8.jpg",
+        "variable-bathroom9.jpg"
       ]
     },
     "pen-plotter": {
@@ -140,6 +80,97 @@
         "pen-plotter9.jpg"
       ]
     },
+    "superfabric-backpack": {
+      "firstImage": "superfabric-backpack1.jpg",
+      "assets": [
+        "superfabric-backpack1.jpg",
+        "superfabric-backpack2.jpg",
+        "superfabric-backpack3.jpg",
+        "superfabric-backpack4.jpg",
+        "superfabric-backpack5.jpg",
+        "superfabric-backpack6.jpg"
+      ]
+    },
+    "parametric-lampshades": {
+      "firstImage": "parametric-lampshades1.jpg",
+      "assets": [
+        "parametric-lampshades1.jpg",
+        "parametric-lampshades2 .jpg",
+        "parametric-lampshades3.jpg",
+        "parametric-lampshades4.jpg",
+        "parametric-lampshades5.jpg",
+        "parametric-lampshades6.jpg",
+        "parametric-lampshades7.jpg",
+        "parametric-lampshades8.jpg"
+      ]
+    },
+    "kinetic-light": {
+      "firstImage": "kinetic-light1.jpg",
+      "assets": [
+        "kinetic-light-video.mp4",
+        "kinetic-light1.jpg",
+        "kinetic-light2.jpg",
+        "kinetic-light3.jpg",
+        "kinetic-light4.jpg",
+        "kinetic-light5.jpg",
+        "kinetic-light6.jpg",
+        "kinetic-light7.jpg"
+      ]
+    },
+    "digital-fabrication": {
+      "firstImage": "digital-fabrication1.jpg",
+      "assets": [
+        "digital-fabrication1.jpg",
+        "digital-fabrication2.jpg",
+        "digital-fabrication3.jpg",
+        "digital-fabrication4.jpg",
+        "digital-fabrication5.jpg",
+        "digital-fabrication6.jpg",
+        "digital-fabrication7.jpg"
+      ]
+    },
+    "logo-design": {
+      "firstImage": "logo-design1.png",
+      "assets": [
+        "logo-design1.png",
+        "logo-design2.png",
+        "logo-design3.png",
+        "logo-design4.png"
+      ]
+    },
+    "kinetic-furniture": {
+      "firstImage": "kinetic-furniture1.jpg",
+      "assets": [
+        "kinetic-furniture1.jpg",
+        "kinetic-furniture2.jpg",
+        "kinetic-furniture3.jpg",
+        "kinetic-furniture4.jpg",
+        "kinetic-furniture5.png"
+      ]
+    },
+    "dodetech": {
+      "firstImage": "dodetech1.png",
+      "assets": [
+        "dodetech1.png",
+        "dodetech2.png",
+        "dodetech3.jpg",
+        "dodetech4.jpg"
+      ]
+    },
+
+    "media-design": {
+      "firstImage": "media-design1.png",
+      "assets": [
+        "media-design-video.mp4",
+        "media-design1.png",
+        "media-design2.png",
+        "media-design3.png",
+        "media-design4.png",
+        "media-design5.png",
+        "media-design6.png"
+      ]
+    },
+
     "product-ux-design": {
       "firstImage": "product-ux-design1.jpg",
       "assets": [
@@ -162,35 +193,6 @@
         "street-furniture7.jpg",
         "street-furniture8.jpg"
       ]
-    },
-    "superfabric-backpack": {
-      "firstImage": "superfabric-backpack1.jpg",
-      "assets": [
-        "superfabric-backpack1.jpg",
-        "superfabric-backpack2.jpg",
-        "superfabric-backpack3.jpg",
-        "superfabric-backpack4.jpg",
-        "superfabric-backpack5.jpg",
-        "superfabric-backpack6.jpg"
-      ]
-    },
-    "variable-bathroom": {
-      "firstImage": "variable-bathroom1.jpg",
-      "assets": [
-        "variable-bathroom1.jpg",
-        "variable-bathroom10.jpg",
-        "variable-bathroom11.jpg",
-        "variable-bathroom12.jpg",
-        "variable-bathroom13.jpg",
-        "variable-bathroom2.jpg",
-        "variable-bathroom3.jpg",
-        "variable-bathroom4.jpg",
-        "variable-bathroom5.jpg",
-        "variable-bathroom6.jpg",
-        "variable-bathroom7.jpg",
-        "variable-bathroom8.jpg",
-        "variable-bathroom9.jpg"
-      ]
     }
   },
   "artworks": {
@@ -204,27 +206,26 @@
       "artwork6.jpg",
       "artwork7.jpg",
       "artwork8.jpg",
-      "artwork9.jpg"
+      "artwork9.jpg",
+      "artwork10.jpg",
+      "artwork11.jpg",
+      "artwork12.jpg",
+      "artwork13.jpg",
+      "artwork14.jpg"
     ]
   },
   "webProjects": {
     "hwaran": {
       "firstImage": "hwaran.png",
-      "assets": [
-        "hwaran.png"
-      ]
+      "assets": ["hwaran.png"]
     },
     "monskin": {
       "firstImage": "monskin.png",
-      "assets": [
-        "monskin.png"
-      ]
+      "assets": ["monskin.png"]
     },
     "photography": {
       "firstImage": "photography.png",
-      "assets": [
-        "photography.png"
-      ]
+      "assets": ["photography.png"]
     }
   }
 }

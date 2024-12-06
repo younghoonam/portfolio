@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Younghoo Nam</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="https://unpkg.com/@tweenjs/tween.js@^20.0.0/dist/tween.umd.js"></script>
+
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+      varying vec2 vUv;
+
+      void main() {
+
+        vUv = uv;
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+      }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+            uniform sampler2D baseTexture;
+            uniform sampler2D bloomTexture;
+
+            varying vec2 vUv;
+
+            void main() {
+
+              vec4 base_color = texture2D(baseTexture, vUv);
+      vec4 bloom_color = texture2D(bloomTexture, vUv);
+
+      float lum = 0.21 * bloom_color.r + 0.71 * bloom_color.g + 0.07 * bloom_color.b;
+      gl_FragColor = vec4(base_color.rgb + bloom_color.rgb, max(base_color.a, lum));
+
+            }
+    </script>
+  </head>
+  <body>
+    <div class="hud">
+      <span id="scrollTop"></span>
+      <span id="specContainerScrollTop"></span>
+    </div>
+
+    <canvas></canvas>
+    <main>
+      <!-- INTRO PAGE -->
+      <div class="intro-background"></div>
+      <div class="background-image"></div>
+      <div class="page main-page transform-break">
+        <div class="main-text-wrapper">
+          <h2 class="main-subtitle">illuminate your adventures</h2>
+          <h1 class="main-title">HwaRan<br />headlamp</h1>
+          <p class="main-description">
+            Embark the outdoors with clarity, guided by the light of HwaRan.
+            Designed for the modern explorer, HwaRan is more than just a
+            headlamp—it's your beacon of light in the darkness.
+          </p>
+        </div>
+      </div>
+      <!-- LIGHTING MODES -->
+      <div class="page spec-page transform-break" id="">
+        <h1 class="page-title">lighting<br />modes</h1>
+        <div class="spec-wrapper">
+          <div class="lighting-mode highlight" id="spotlight-25deg">
+            <h3 class="mode-num bolding">mode - 1</h3>
+            <h2 class="mode-name bolding">spotlight 25°</h2>
+            <div class="lighting-mode-spec-parent">
+              <div class="spec-name">brightness</div>
+              <div class="bolding">20Lm</div>
+              <div>-</div>
+              <div class="spec-max bolding">400Lm</div>
+              <div class="spec-name">use time</div>
+              <div class="bolding">55h</div>
+              <div>-</div>
+              <div class="spec-max bolding">4.5h</div>
+              <div class="spec-name">distance</div>
+              <div class="bolding">25m</div>
+              <div>-</div>
+              <div class="spec-max bolding">100m</div>
+            </div>
+          </div>
+          <div class="lighting-mode highlight" id="spotlight-8deg">
+            <h3 class="mode-num bolding">mode - 2</h3>
+            <h2 class="mode-name bolding">spotlight 8°</h2>
+            <div class="lighting-mode-spec-parent">
+              <div class="spec-name">brightness</div>
+              <div class="bolding">20Lm</div>
+              <div>-</div>
+              <div class="spec-max bolding">400Lm</div>
+              <div class="spec-name">use time</div>
+              <div class="bolding">55h</div>
+              <div>-</div>
+              <div class="spec-max bolding">4.5h</div>
+              <div class="spec-name">distance</div>
+              <div class="bolding">40m</div>
+              <div>-</div>
+              <div class="spec-max bolding">150m</div>
+            </div>
+          </div>
+
+          <div class="lighting-mode highlight" id="flood-light">
+            <h3 class="mode-num bolding">mode - 3</h3>
+            <h2 class="mode-name bolding">flood light</h2>
+            <div class="lighting-mode-spec-parent">
+              <div class="spec-name">brightness</div>
+              <div class="bolding">20Lm</div>
+              <div>-</div>
+              <div class="spec-max bolding">400Lm</div>
+              <div class="spec-name">use time</div>
+              <div class="bolding">55h</div>
+              <div>-</div>
+              <div class="spec-max bolding">4.5h</div>
+              <div class="spec-name">distance</div>
+              <div class="bolding">5m</div>
+              <div>-</div>
+              <div class="spec-max bolding">30m</div>
+            </div>
+          </div>
+          <div class="lighting-mode highlight" id="turbo">
+            <h3 class="mode-num bolding">mode - 4</h3>
+            <h2 class="mode-name bolding">turbo</h2>
+            <div class="lighting-mode-spec-parent">
+              <div class="spec-name">brightness</div>
+              <div class="bolding">40Lm</div>
+              <div>-</div>
+              <div class="spec-max bolding">600Lm</div>
+              <div class="spec-name">use time</div>
+              <div class="bolding">30h</div>
+              <div>-</div>
+              <div class="spec-max bolding">3h</div>
+              <div class="spec-name">distance</div>
+              <div class="bolding">25m</div>
+              <div>-</div>
+              <div class="spec-max bolding">130m</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider transform-break"></div>
+
+      <!-- FLOOD LIGHT COLORS -->
+      <div class="page spec-page transform-break">
+        <h1 class="page-title">flooding<br />colors</h1>
+        <div class="spec-wrapper">
+          <div class="lighting-mode highlight" id="3000k">
+            <h3 class="mode-num bolding">color - 1</h3>
+            <h2 class="mode-name bolding flood-warm">warm 3000k</h2>
+            <div class="">
+              <div class="spec-description">
+                Creates a cozy, campfire-like ambiance for relaxing and
+                socializing, is less disruptive for observing wildlife, and
+                enhances nighttime photography with a pleasing glow.
+              </div>
+            </div>
+          </div>
+          <div class="lighting-mode highlight" id="6500k">
+            <h3 class="mode-num bolding">color - 2</h3>
+            <h2 class="mode-name bolding flood-white">white 6500k</h2>
+            <div class="">
+              <div class="spec-description">
+                Offers high contrast for navigating trails and spotting
+                obstacles, ensures clear visibility for detailed tasks, and is
+                crucial for signaling and first aid in emergencies.
+              </div>
+            </div>
+          </div>
+          <div class="lighting-mode highlight" id="4200k">
+            <h3 class="mode-num bolding">color - 3</h3>
+            <h2 class="mode-name bolding flood-neutral">neutral 4200k</h2>
+            <div class="">
+              <div class="spec-description">
+                Provides balanced illumination for various activities, reduces
+                eye strain during extended use, and offers a versatile, natural
+                glow suitable for multiple campsite tasks.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider transform-break"></div>
+
+      <!-- BUTTON INSTRUCTIONS -->
+      <div class="page spec-page button-page transform-break">
+        <h1 class="page-title">intuitive<br />buttons</h1>
+        <div class="spec-wrapper button-instructions">
+          <div class="button-instruction highlight" id="on-off">
+            <div class="bolding">
+              Press <img class="button-icon" src="images/io.svg" alt="" /> to
+              turn on/off
+            </div>
+          </div>
+          <div class="button-instruction highlight" id="gradual-brightness">
+            <div class="bolding">
+              Long press
+              <img class="button-icon" src="images/io.svg" alt="" /> to change
+              brightness gradually
+            </div>
+          </div>
+          <div class="button-instruction highlight" id="step-brightness">
+            <div class="bolding">
+              Press
+              <img class="button-icon" src="images/lamp.svg" alt="" /> while
+              holding down
+              <img class="button-icon" src="images/io.svg" alt="" /> to change
+              brightness by steps
+            </div>
+          </div>
+          <div class="button-instruction highlight" id="change-mode">
+            <div class="bolding">
+              Press <img class="button-icon" src="images/lamp.svg" alt="" /> to
+              change lighting modes
+            </div>
+          </div>
+          <div class="button-instruction highlight" id="sos">
+            <div class="bolding">
+              Press <img class="button-icon" src="images/lamp.svg" alt="" /> for
+              3 seconds to turn on sos blinking mode
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider transform-break"></div>
+
+      <!-- USB-C -->
+      <div class="page spec-page transform-break">
+        <h1 class="page-title">usb-c<br />charging</h1>
+      </div>
+      <div class="divider transform-break"></div>
+
+      <!-- BAND COLORS -->
+      <div class="page spec-page transform-break">
+        <h1 class="page-title">band<br />colors</h1>
+        <div class="spec-wrapper">
+          <div class="color-swatch highlight" id="flame-red">
+            <span class="color-circle" id="flame-red"></span>
+            <span class="color-name bolding">flame red</span>
+          </div>
+          <div class="color-swatch highlight" id="sunset-orange">
+            <span class="color-circle" id="sunset-orange"></span>
+            <span class="color-name bolding">sunset orange</span>
+          </div>
+          <div class="color-swatch highlight" id="midnight-blue">
+            <span class="color-circle" id="midnight-blue"></span>
+            <span class="color-name bolding">midnight blue</span>
+          </div>
+          <div class="color-swatch highlight" id="forrest-green">
+            <span class="color-circle" id="forrest-green"></span>
+            <span class="color-name bolding">zest green</span>
+          </div>
+          <div class="color-swatch highlight" id="glacier-white">
+            <span class="color-circle" id="glacier-white"></span>
+            <span class="color-name bolding">glacier white</span>
+          </div>
+        </div>
+      </div>
+      <div class="divider transform-break" id="call-to-action-page">
+        <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-title">Light up<br />your path</h1>
+          <span class="call-to-action-description">Get a HwaRan for $60</span>
+          <a class="call-to-action-button" href="https://www.younghoonam.com"
+            >Order now</a
+          >
+        </div>
+      </div>
+
+      <footer>
+        <span>©2024 younghoo nam</span>
+      </footer>
+    </main>
+
+    <div class="scroll-watcher">
+      <div class="scroll-watcher-value"></div>
+    </div>
+    <button class="posrot" id="pos" onclick="copyPos()"></button>
+    <button class="posrot" id="rot" onclick="copyRot()"></button>
+
+    <script type="module" src="scripts/script.js"></script>
+  </body>
+</html>
